@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#5b9279",
+        bgPrimary: "#5b9279",
+        bgSecondary: "#8fcb9b",
+        tPrimary: "#eae6e5",
+        tSecondary: "#8f8073",
       },
       fontFamily: {
         heading: "Dancing Script, Roboto",
