@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 place-content-center h-[70vh]">
+    <div className="grid grid-cols-2 place-content-center h-[100%]">
       <div className="flex flex-col gap-3 font-heading my-auto mx-auto">
         <h1 className="text-3xl">Hello, it's Me</h1>
         <h1 className="text-8xl tracking-widest">Haseeb Irfan</h1>
