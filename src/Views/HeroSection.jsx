@@ -31,9 +31,9 @@ const HeroSection = () => {
   return (
     <div className="container mx-auto grid grid-cols-2 place-content-center">
       <motion.div
-        initial={{ opacity: 0, scale: 0.3, x: -300 }}
-        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-        transition={{ duration: 1, ease: easeIn }}
+        initial={{ opacity: 0, scale: 0.3 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2 }}
         className="flex flex-col gap-3 font-heading my-auto mx-auto"
       >
         <h1 className="text-3xl">Hello, it's Me</h1>
