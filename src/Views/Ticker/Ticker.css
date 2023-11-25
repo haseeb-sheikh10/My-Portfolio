@@ -1,0 +1,34 @@
+@keyframes slide {
+  to {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}
+
+.ticker:hover .logo-slider {
+  animation-play-state: paused;
+}
+
+.ticker {
+  overflow: hidden;
+  background-color: black;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.logo-slider {
+  animation: slide 20s infinite linear;
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+
+.logo-slider img {
+  width: 80px;
+}

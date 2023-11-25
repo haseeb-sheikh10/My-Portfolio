@@ -14,4 +14,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section:not(.hero-section) {
+  padding-top: 10%;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #5b8279;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8fcb96;
+}
+
+::-webkit-scrollbar-track {
+  background-color: inherit;
+  border-radius: 6px;
 }

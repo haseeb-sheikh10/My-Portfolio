@@ -4,23 +4,27 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { TbBrandFiverr } from "react-icons/tb";
 import { FaStackOverflow } from "react-icons/fa";
 import thumbnailPic from "../assets/mypic.jpeg";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <div className="p-2 bg-bgPrimary sticky top-0">
       <div className="container mx-auto grid grid-cols-3 place-content-center">
-        <div className="flex items-center gap-3 font-heading text-tPrimary text-[2rem] tracking-widest font-bold">
-          {/* <div className="rounded-full w-16">
-            <img
-              className="rounded-full"
-              src={thumbnailPic}
-              alt="Haseeb Irfan"
-            />
-          </div> */}
-          <h2>Portfolio. </h2>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="font-heading text-tPrimary text-[2rem] tracking-widest font-bold w-fit"
+        >
+          Portfolio.
+        </motion.div>
         <div></div>
-        <div className="flex justify-end gap-7 items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="flex justify-end gap-7 items-center"
+        >
           <span className="rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition p-2">
             <FaGithubAlt className="text-2xl" />
           </span>
@@ -33,7 +37,7 @@ const Navbar = () => {
           <span className="rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition p-2">
             <FaStackOverflow className="text-2xl" />
           </span>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

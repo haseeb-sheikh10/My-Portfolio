@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import myPic from "../assets/mypic2.png";
 // import { Button } from "@mui/material";
+import { easeIn, motion } from "framer-motion";
 
 const HeroSection = () => {
   const typing = useRef(null);
@@ -28,8 +29,13 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 place-content-center h-[100%]">
-      <div className="flex flex-col gap-3 font-heading my-auto mx-auto">
+    <div className="container mx-auto grid grid-cols-2 place-content-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3, x: -300 }}
+        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+        transition={{ duration: 1, ease: easeIn }}
+        className="flex flex-col gap-3 font-heading my-auto mx-auto"
+      >
         <h1 className="text-3xl">Hello, it's Me</h1>
         <h1 className="text-8xl tracking-widest">Haseeb Irfan</h1>
         <div>
@@ -41,7 +47,7 @@ const HeroSection = () => {
             ref={typing}
           ></span>
         </div>
-      </div>
+      </motion.div>
       <div>
         <svg
           id="sw-js-blob-svg"
