@@ -17,6 +17,7 @@
     "@fontsource-variable/fira-code": "^5.0.15",
     "@mui/icons-material": "^5.14.18",
     "@reduxjs/toolkit": "^1.9.7",
+    "@vercel/analytics": "^1.1.1",
     "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -5,8 +5,10 @@ import "@fontsource-variable/fira-code";
 import HeroSection from "./Views/HeroSection";
 import LogoTicker from "./Views/Ticker/LogoTicker";
 
+import { inject } from "@vercel/analytics";
+
 function App() {
-  const [count, setCount] = useState(0);
+  inject();
 
   return (
     <>
