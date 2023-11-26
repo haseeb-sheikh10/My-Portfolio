@@ -7,23 +7,25 @@ import LogoTicker from "./Views/Ticker/LogoTicker";
 
 import { inject } from "@vercel/analytics";
 
-function App() {
+const App = () => {
   inject();
 
   return (
     <>
       <Navbar />
       <div className="">
-        <section className="hero-section relative">
+        <section className="section1 pt-16 flex flex-col justify-between">
           <HeroSection />
           <LogoTicker />
         </section>
-        <section>section2</section>
+        <section id="section2" className="pt-16">
+          section2
+        </section>
         <section>section3</section>
         <section>section4</section>
       </div>
     </>
   );
-}
+};
 
 export default App;

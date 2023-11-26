@@ -9,8 +9,7 @@
 }
 
 .ticker {
-  overflow: hidden;
-  background-color: black;
+  overflow-x: hidden;
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   -webkit-mask: linear-gradient(
     90deg,
@@ -19,6 +18,7 @@
     white 80%,
     transparent
   );
+  height: 10vh;
 }
 
 .logo-slider {
@@ -30,5 +30,5 @@
 }
 
 .logo-slider img {
-  width: 80px;
+  width: 60px;
 }

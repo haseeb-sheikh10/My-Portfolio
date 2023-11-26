@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark; */
+  --body-color: #12130f;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #12130f;
+  background-color: var(--body-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,18 +17,15 @@
   scroll-snap-type: y mandatory;
 }
 
-section:not(.hero-section) {
-  padding-top: 10%;
-}
 section {
   height: 100vh;
   scroll-snap-align: center;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 12px;
-}
-::-webkit-scrollbar-thumb {
+} */
+/* ::-webkit-scrollbar-thumb {
   background-color: #5b8279;
   border-radius: 6px;
 }
@@ -42,4 +37,4 @@ section {
 ::-webkit-scrollbar-track {
   background-color: inherit;
   border-radius: 6px;
-}
+} */

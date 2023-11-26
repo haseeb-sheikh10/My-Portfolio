@@ -19,7 +19,6 @@ import psql from "../../assets/Logos/psql.png";
 import angular from "../../assets/Logos/angular.png";
 
 import "./Ticker.css";
-import { motion } from "framer-motion";
 
 const LogoTicker = () => {
   const tickerRef = useRef(null);
@@ -47,7 +46,7 @@ const LogoTicker = () => {
   }, []);
 
   return (
-    <div className="ticker py-5" ref={tickerRef} data-animated={dataAnimated}>
+    <div className="ticker pt-5" ref={tickerRef} data-animated={dataAnimated}>
       <div className="logo-slider" ref={sliderRef}>
         <img src={reactLogo} alt="React" />
         <img src={angular} alt="Angular" />

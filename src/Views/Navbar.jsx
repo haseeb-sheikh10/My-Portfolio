@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div className="p-2 bg-bgPrimary sticky top-0">
+    <div className="p-2 bg-bgPrimary sticky top-0 z-50">
       <div className="container mx-auto grid grid-cols-3 place-content-center">
         <motion.div
           initial={{ opacity: 0 }}
