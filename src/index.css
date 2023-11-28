@@ -5,11 +5,20 @@
   line-height: 1.5;
   font-weight: 500;
   --body-color: #12130f;
-  color: rgba(255, 255, 255, 0.87);
   background-color: var(--body-color);
 
   scroll-behavior: smooth;
-  /* scroll-snap-type: y mandatory; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid white; */
+}
+
+section {
+  height: 92vh;
 }
 
 /* ::-webkit-scrollbar {

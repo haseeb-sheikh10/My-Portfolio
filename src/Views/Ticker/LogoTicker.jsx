@@ -46,7 +46,7 @@ const LogoTicker = () => {
   }, []);
 
   return (
-    <div className="ticker pt-5" ref={tickerRef} data-animated={dataAnimated}>
+    <div className="ticker py-5" ref={tickerRef} data-animated={dataAnimated}>
       <div className="logo-slider" ref={sliderRef}>
         <img src={reactLogo} alt="React" />
         <img src={angular} alt="Angular" />

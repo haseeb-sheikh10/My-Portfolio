@@ -13,10 +13,17 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className="section1 mb-10 h-[95vh] flex flex-col">
+      <section className="section1 mb-10 flex flex-col justify-between">
         <HeroSection />
-        {/* <LogoTicker /> */}
+        <LogoTicker />
       </section>
+      <section id="section2" className="section2">
+        section2
+      </section>
+      <section className="section3">section3</section>
+      <section className="section4">section4</section>
+      <section className="section5">section5</section>
+      <section className="section6">section6</section>
     </>
   );
 };

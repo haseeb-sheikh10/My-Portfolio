@@ -3,12 +3,15 @@ import Typed from "typed.js";
 import myPic from "../assets/mypic2.png";
 import { easeIn, motion } from "framer-motion";
 import {
+  FaDownload,
   FaGithubAlt,
   FaLinkedinIn,
   FaLongArrowAltDown,
   FaStackOverflow,
 } from "react-icons/fa";
 import { TbBrandFiverr } from "react-icons/tb";
+import { Button } from "@chakra-ui/react";
+import CV from "../assets/HaseebIrfanCV.pdf";
 
 const HeroSection = () => {
   const typing = useRef(null);
@@ -35,27 +38,27 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="hero-section h-[83vh]">
-      <div className="container mx-auto my-auto h-full grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 place-content-center">
-        <div className="mx-auto my-auto">
+    <div className="hero-section flex flex-1">
+      <div className="container h-[80vh] mx-auto my-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+        <div className="text-tPrimary w-full my-auto pt-5 px-3">
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
-            className="flex flex-col gap-3 font-display"
+            className="flex flex-col gap-3"
           >
-            <h1 className="text-2xl lg:text-3xl text-center lg:text-left font-bold">
+            <h1 className="text-xl lg:text-3xl text-center lg:text-left font-bold">
               Hello, it's Me
             </h1>
-            <h1 className="text-5xl lg:text-6xl text-center lg:text-left font-bold tracking-widest lg:tracking-widest">
+            <h1 className="text-4xl lg:text-5xl text-center lg:text-left font-bold tracking-widest lg:tracking-widest">
               Haseeb Irfan
             </h1>
-            <div className="min-w-[300px] text-center lg:text-left">
-              <span className="text-2xl lg:text-4xl relative font-bold text-tPrimary tracking-widest">
+            <div className="text-center lg:text-left">
+              <span className="text-2xl lg:text-3xl relative font-bold text-tPrimary tracking-widest">
                 I'm a{" "}
               </span>
               <span
-                className="text-2xl lg:text-4xl font-bold cursor-writing text-bgSecondary tracking-widest"
+                className="text-2xl lg:text-3xl font-bold cursor-writing text-bgSecondary tracking-widest"
                 ref={typing}
               ></span>
             </div>
@@ -88,19 +91,21 @@ const HeroSection = () => {
               >
                 <FaStackOverflow className="text-2xl" />
               </a>
-              <button class="Btn">
-                <svg
-                  class="svgIcon"
-                  viewBox="0 0 384 512"
-                  height="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                </svg>
-                <span class="icon2"></span>
-                <span class="tooltip">Download CV</span>
-              </button>
             </div>
+            <a
+              className="flex justify-center lg:justify-start"
+              href={CV}
+              download="HaseebIrfanCV"
+              target="_blank"
+            >
+              <Button
+                leftIcon={<FaDownload />}
+                variant="outline"
+                colorScheme="green"
+              >
+                Download CV
+              </Button>
+            </a>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -120,9 +125,9 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className="px-5 w-10/12">
-          {/* <svg
-            className="max-w-full"
+        <div className="max-h-[310px] md:max-h-[400px] lg:max-h-full overflow-hidden mx-auto lg:mx-0">
+          <svg
+            className="h-full"
             id="sw-js-blob-svg"
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
@@ -148,8 +153,8 @@ const HeroSection = () => {
               <path
                 fill="url(#sw-gradient)"
                 d="M21.3,-32.3C28.3,-28.7,35.2,-23.9,39.3,-17.3C43.4,-10.6,44.7,-2,42,4.9C39.2,11.8,32.3,16.9,26.2,21.2C20.1,25.4,14.8,28.7,8.9,30.7C2.9,32.7,-3.5,33.4,-10,32.3C-16.5,31.2,-22.9,28.3,-26.8,23.4C-30.7,18.6,-32.1,11.7,-31.7,5.4C-31.4,-1,-29.4,-6.7,-26.8,-12.2C-24.3,-17.7,-21.2,-23,-16.6,-27.7C-12.1,-32.4,-6,-36.6,0.6,-37.5C7.2,-38.3,14.3,-35.9,21.3,-32.3Z"
-                // width="100%"
-                // height="100%"
+                width="100%"
+                height="100%"
                 transform="translate(50 50)"
                 strokeWidth="0"
                 style={{ transition: "all 0.3s ease 0s" }}
@@ -160,8 +165,8 @@ const HeroSection = () => {
               <path
                 fill="url(#sw-gradient)"
                 d="M21.3,-32.3C28.3,-28.7,35.2,-23.9,39.3,-17.3C43.4,-10.6,44.7,-2,42,4.9C39.2,11.8,32.3,16.9,26.2,21.2C20.1,25.4,14.8,28.7,8.9,30.7C2.9,32.7,-3.5,33.4,-10,32.3C-16.5,31.2,-22.9,28.3,-26.8,23.4C-30.7,18.6,-32.1,11.7,-31.7,5.4C-31.4,-1,-29.4,-6.7,-26.8,-12.2C-24.3,-17.7,-21.2,-23,-16.6,-27.7C-12.1,-32.4,-6,-36.6,0.6,-37.5C7.2,-38.3,14.3,-35.9,21.3,-32.3Z"
-                // width="100%"
-                // height="100%"
+                width="100%"
+                height="100%"
                 transform="translate(50 50)"
                 strokeWidth="0"
                 style={{ transition: "all 0.3s ease 0s" }}
@@ -169,8 +174,7 @@ const HeroSection = () => {
               ></path>
               <image className="w-24" href={myPic} x="7" y="18" />
             </g>
-          </svg> */}
-          {/* <img className="" src={myPic} alt="Haseeb Irfan" /> */}
+          </svg>
         </div>
       </div>
     </div>

@@ -12,11 +12,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@fontsource-variable/fira-code": "^5.0.15",
     "@fontsource/ubuntu": "^5.0.8",
-    "@mui/icons-material": "^5.14.18",
     "@reduxjs/toolkit": "^1.9.7",
     "@vercel/analytics": "^1.1.1",
     "framer-motion": "^10.16.5",
