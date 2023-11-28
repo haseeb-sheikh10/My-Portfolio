@@ -35,14 +35,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="hero-section flex-1 h-[90vh]">
+    <div className="hero-section h-[83vh]">
       <div className="container mx-auto my-auto h-full grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 place-content-center">
-        <div className="mx-auto my-auto w-full px-5 md:py-5">
+        <div className="mx-auto my-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
-            className="flex flex-col gap-3 font-display "
+            className="flex flex-col gap-3 font-display"
           >
             <h1 className="text-2xl lg:text-3xl text-center lg:text-left font-bold">
               Hello, it's Me
@@ -59,74 +59,68 @@ const HeroSection = () => {
                 ref={typing}
               ></span>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.3 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2 }}
-            className="flex gap-3 items-center mt-5 justify-center lg:justify-start"
-          >
-            <a
-              href="#"
-              target="_blank"
-              className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
-            >
-              <FaGithubAlt className="text-2xl" />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
-            >
-              <FaLinkedinIn className="text-2xl" />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
-            >
-              <TbBrandFiverr className="text-2xl" />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
-            >
-              <FaStackOverflow className="text-2xl" />
-            </a>
-            <button class="Btn">
-              <svg
-                class="svgIcon"
-                viewBox="0 0 384 512"
-                height="1em"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="flex gap-3 items-center mt-5 justify-center lg:justify-start">
+              <a
+                href="#"
+                target="_blank"
+                className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
               >
-                <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-              </svg>
-              <span class="icon2"></span>
-              <span class="tooltip">Download CV</span>
-            </button>
-          </motion.div>
-          <motion.div className="mt-10 relative"></motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, delay: 2 }}
-            className="flex justify-center lg:justify-start"
-          >
-            <a href="#section2" className="animate-bounce">
-              <div className="w-12 h-12 mt-10 shadow-sm shadow-bgPrimary rounded-full bg-black">
-                <span className="flex justify-center items-center h-full">
-                  <FaLongArrowAltDown
-                    size="30px"
-                    className="text-bgSecondary h-fit"
-                  />
-                </span>
-              </div>
-            </a>
+                <FaGithubAlt className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
+              >
+                <FaLinkedinIn className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
+              >
+                <TbBrandFiverr className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
+              >
+                <FaStackOverflow className="text-2xl" />
+              </a>
+              <button class="Btn">
+                <svg
+                  class="svgIcon"
+                  viewBox="0 0 384 512"
+                  height="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                </svg>
+                <span class="icon2"></span>
+                <span class="tooltip">Download CV</span>
+              </button>
+            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2, delay: 2 }}
+              className="flex justify-center lg:justify-start"
+            >
+              <a href="#section2" className="animate-bounce">
+                <div className="w-12 h-12 mt-10 shadow-sm shadow-bgPrimary rounded-full bg-black">
+                  <span className="flex justify-center items-center h-full">
+                    <FaLongArrowAltDown
+                      size="30px"
+                      className="text-bgSecondary h-fit"
+                    />
+                  </span>
+                </div>
+              </a>
+            </motion.div>
           </motion.div>
         </div>
-        <div className="px-5 overflow-hidden">
+        <div className="px-5 w-10/12">
           {/* <svg
             className="max-w-full"
             id="sw-js-blob-svg"
@@ -176,7 +170,7 @@ const HeroSection = () => {
               <image className="w-24" href={myPic} x="7" y="18" />
             </g>
           </svg> */}
-          <img className="w-10/12" src={myPic} alt="Haseeb Irfan" />
+          {/* <img className="" src={myPic} alt="Haseeb Irfan" /> */}
         </div>
       </div>
     </div>

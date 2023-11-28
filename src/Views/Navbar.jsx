@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div className="p-2 bg-bgPrimary sticky top-0 z-50">
+    <div className="p-2 bg-bgPrimary z-50">
       <div className="container mx-auto grid grid-cols-3 place-content-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="flex justify-end gap-7 items-center"
+          className="justify-end gap-7 hidden md:flex items-center"
         >
           <span className="rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition p-2">
             <FaGithubAlt className="text-2xl" />

@@ -3,23 +3,13 @@
 @tailwind utilities;
 :root {
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   --body-color: #12130f;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--body-color);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-type: y mandatory; */
 }
 
 /* ::-webkit-scrollbar {
