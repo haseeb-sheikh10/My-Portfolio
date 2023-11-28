@@ -11,7 +11,7 @@ export default {
       },
       fontFamily: {
         heading: "Dancing Script, Roboto",
-        display: "Roboto",
+        display: "Ubuntu",
       },
     },
   },

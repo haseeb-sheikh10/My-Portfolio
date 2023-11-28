@@ -1,6 +1,6 @@
 .hero-section {
   background-image: linear-gradient(0deg, #8fcb9b48, transparent),
-    url("/media/haseeb/Local Disk/vsCode/portfolio/src/assets/pxfuel.jpg");
+    url("./assets/pxfuel.jpg");
   background-position: center;
   background-size: cover;
 }

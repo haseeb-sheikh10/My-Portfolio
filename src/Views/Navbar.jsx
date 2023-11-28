@@ -14,7 +14,7 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="font-heading text-tPrimary text-[2rem] tracking-widest font-bold w-fit"
+          className="font-display text-tPrimary text-[2rem] tracking-widest font-bold w-fit"
         >
           Portfolio.
         </motion.div>
