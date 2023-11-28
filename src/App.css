@@ -4,6 +4,38 @@
   background-position: center;
   background-size: cover;
 }
+.Parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mountains {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/mountains.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+}
+.planets {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/planets.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/stars.png");
+  background-position: center;
+  background-size: cover;
+}
 .typed-cursor {
   color: white;
   background-color: white;

@@ -38,16 +38,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="hero-section flex flex-1">
-      <div className="container h-[80vh] mx-auto my-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
-        <div className="text-tPrimary w-full my-auto pt-5 px-3">
+    <div className="hero-section h-[70vh] flex flex-1">
+      <div className="container h-[70vh] mx-auto my-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+        <div className="text-tPrimary w-full my-auto pt-5 lg:pl-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
             className="flex flex-col gap-3"
           >
-            <h1 className="text-xl lg:text-3xl text-center lg:text-left font-bold">
+            <h1 className="text-xl lg:text-2xl text-center lg:text-left font-bold">
               Hello, it's Me
             </h1>
             <h1 className="text-4xl lg:text-5xl text-center lg:text-left font-bold tracking-widest lg:tracking-widest">
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 ref={typing}
               ></span>
             </div>
-            <div className="flex gap-3 items-center mt-5 justify-center lg:justify-start">
+            <div className="flex gap-3 items-center mt-3 justify-center lg:justify-start">
               <a
                 href="#"
                 target="_blank"
@@ -93,7 +93,7 @@ const HeroSection = () => {
               </a>
             </div>
             <a
-              className="flex justify-center lg:justify-start"
+              className="flex mt-3 justify-center lg:justify-start"
               href={CV}
               download="HaseebIrfanCV"
               target="_blank"
@@ -112,7 +112,7 @@ const HeroSection = () => {
               transition={{ duration: 2, delay: 2 }}
               className="flex justify-center lg:justify-start"
             >
-              <a href="#section2" className="animate-bounce">
+              <a href="#section3" className="animate-bounce">
                 <div className="w-12 h-12 mt-10 shadow-sm shadow-bgPrimary rounded-full bg-black">
                   <span className="flex justify-center items-center h-full">
                     <FaLongArrowAltDown

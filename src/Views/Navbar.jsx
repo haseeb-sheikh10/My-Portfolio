@@ -38,14 +38,16 @@ const Navbar = () => {
       } sticky top-0 z-50 shadow-xl`}
     >
       <div className="container mx-auto grid grid-cols-3 place-content-center">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          className="text-[1.5rem] align-middle tracking-widest font-bold w-fit"
-        >
-          Portfolio.
-        </motion.div>
+        <a href="/">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="text-[1.5rem] align-middle tracking-widest font-bold w-fit"
+          >
+            Portfolio.
+          </motion.div>
+        </a>
         <motion.nav
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

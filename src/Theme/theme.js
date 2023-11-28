@@ -6,8 +6,13 @@ const globalStyles = {
     gray: {
       700: "#1f2733",
     },
-    primary: "#5b9279",
-    secondary: "#8fcb9b",
+    primary: {
+      500: "#5b9279",
+    },
+
+    secondary: {
+      500: "#8fcb9b",
+    },
   },
   styles: {
     global: (props) => ({
