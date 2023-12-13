@@ -35,7 +35,7 @@ const Navbar = () => {
     <div
       className={`p-2 transition-colors ${
         isScrolled ? "bg-bgPrimary text-tPrimary" : "bg-transparent"
-      } sticky top-0 z-50 shadow-xl`}
+      } sticky top-0 z-50 w-full shadow-xl`}
     >
       <div className="container mx-auto grid grid-cols-3 place-content-center">
         <a href="/">

@@ -1,13 +1,12 @@
-import { useState } from "react";
 import "./App.css";
 import Navbar from "./Views/Navbar";
 import "@fontsource-variable/fira-code";
 import HeroSection from "./Views/HeroSection";
-import LogoTicker from "./Views/Ticker/LogoTicker";
 import React from "react";
 
 import { inject } from "@vercel/analytics";
-import Parallax from "./Views/Parallax";
+import Sidebar from "./Views/Projects/Sidebar";
+import Projects from "./Views/Projects/Projects";
 
 const App = () => {
   inject();
@@ -15,12 +14,11 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className="mb-10 flex flex-col justify-between">
+      <section className="">
         <HeroSection />
-        <LogoTicker />
       </section>
-      <section id="section2" className="mb-10 pt-5">
-        <Parallax />
+      <section id="section2" className="mb-10">
+        <Projects />
       </section>
       <section id="section3" className="section3">
         section3
