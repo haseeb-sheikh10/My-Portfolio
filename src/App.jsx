@@ -10,6 +10,7 @@ import Projects from "./Views/Projects/Projects";
 import Skills from "./Views/Projects/Skills";
 import Timeline from "./Views/Timeline/Timeline";
 import TerminalBox from "./Views/Contact/TerminalBox";
+import Footer from "./Views/Footer";
 
 const App = () => {
   inject();
@@ -32,6 +33,7 @@ const App = () => {
       <section id="contact" className="my-12 md:my-24">
         <TerminalBox />
       </section>
+      <Footer />
     </>
   );
 };
