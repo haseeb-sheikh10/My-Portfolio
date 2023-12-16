@@ -1,0 +1,11 @@
+.timeline-box::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #8fcb9b;
+  border: 1px solid white;
+  top: 15%;
+  right: calc(100% + 23px);
+}

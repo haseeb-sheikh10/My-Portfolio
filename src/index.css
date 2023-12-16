@@ -4,9 +4,7 @@
 :root {
   line-height: 1.5;
   font-weight: 500;
-  --body-color: #12130f;
-  background-color: var(--body-color);
-  /* scroll-snap-type: y mandatory; */
+  --body-color: #14131a;
   scroll-behavior: smooth;
 }
 
@@ -17,7 +15,7 @@
   /* border: 1px solid white; */
 }
 
-section {
+.section1 {
   height: 98vh;
   /* scroll-snap-align: center; */
 }

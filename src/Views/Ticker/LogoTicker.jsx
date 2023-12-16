@@ -17,6 +17,8 @@ import mySql from "../../assets/Logos/mysql.png";
 import nodejs from "../../assets/Logos/nodejs.png";
 import psql from "../../assets/Logos/psql.png";
 import angular from "../../assets/Logos/angular.png";
+import NextJS from "../../assets/Logos/nextjs.svg";
+import redis from "../../assets/Logos/redis.png";
 
 import "./Ticker.css";
 
@@ -49,6 +51,7 @@ const LogoTicker = () => {
     <div className="ticker py-5" ref={tickerRef} data-animated={dataAnimated}>
       <div className="logo-slider" ref={sliderRef}>
         <img src={reactLogo} alt="React" />
+        <img src={NextJS} alt="NextJS" />
         <img src={angular} alt="Angular" />
         <img src={jsLogo} alt="Javascript" />
         <img src={tsLogo} alt="Typescript" />
@@ -66,6 +69,7 @@ const LogoTicker = () => {
         <img src={psql} alt="Postgresql" />
         <img src={mongoDb} alt="MongoDB" />
         <img src={nodejs} alt="NodeJS" />
+        <img src={redis} alt="Redis" />
       </div>
     </div>
   );

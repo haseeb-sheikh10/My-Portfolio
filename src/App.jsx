@@ -7,6 +7,9 @@ import React from "react";
 import { inject } from "@vercel/analytics";
 import Sidebar from "./Views/Projects/Sidebar";
 import Projects from "./Views/Projects/Projects";
+import Skills from "./Views/Projects/Skills";
+import Timeline from "./Views/Timeline/Timeline";
+import TerminalBox from "./Views/Contact/TerminalBox";
 
 const App = () => {
   inject();
@@ -14,18 +17,21 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className="">
+      <section className="section1">
         <HeroSection />
       </section>
-      <section id="section2" className="mb-10">
+      <section id="projects" className="my-12 md:my-24">
         <Projects />
       </section>
-      <section id="section3" className="section3">
-        section3
+      <section id="skills" className="my-12 md:my-24">
+        <Skills />
       </section>
-      <section className="section4">section4</section>
-      <section className="section5">section5</section>
-      <section className="section6">section6</section>
+      <section id="timeline" className="my-12 md:my-24">
+        <Timeline />
+      </section>
+      <section id="contact" className="my-12 md:my-24">
+        <TerminalBox />
+      </section>
     </>
   );
 };

@@ -56,20 +56,20 @@ const Navbar = () => {
         >
           <ul className="flex flex-1 gap-10 justify-end">
             <li className="cursor-pointer hover:bg-bgSecondary p-2 hover:text-black rounded-md">
-              <a href="#">Projects</a>
-            </li>
-            <li className="cursor-pointer hover:bg-bgSecondary p-2 hover:text-black rounded-md">
-              <a href="#">Timeline</a>
+              <a href="#projects">Projects</a>
             </li>
             <li
               className="cursor-pointer
               hover:bg-bgSecondary
               p-2 hover:text-black rounded-md"
             >
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li className="cursor-pointer hover:bg-bgSecondary p-2 hover:text-black rounded-md">
-              <a href="#">Conatct</a>
+              <a href="#timeline">Timeline</a>
+            </li>
+            <li className="cursor-pointer hover:bg-bgSecondary p-2 hover:text-black rounded-md">
+              <a href="#contact">Conatct</a>
             </li>
             <li
               onClick={toggleColorMode}
