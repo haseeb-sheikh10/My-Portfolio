@@ -1,5 +1,4 @@
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
 import { ReactTerminal } from "react-terminal";
 import "./terminal.css";
 
@@ -30,24 +29,29 @@ const TerminalBox = () => {
     <div className="w-[80%] mx-auto h-[500px]">
       <Flex gap={2} alignItems="center">
         <Box width="80px" height="5px" className="bg-bgPrimary"></Box>
-        <Text fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>
+        <Text
+          className="text-scroll-reveal"
+          fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
+        >
           How Can I Help You?
         </Text>
       </Flex>
-      <ReactTerminal
-        commands={commands}
-        themes={{
-          "my-custom-theme": {
-            themeBGColor: themeBgColor,
-            themeToolbarColor: themeToolBarColor,
-            themeColor: "#8fcb9b",
-            themePromptColor: themeToolBarColor,
-          },
-        }}
-        theme="my-custom-theme"
-        welcomeMessage={welcomeMessage}
-        prompt="$ haseebirfan-dev >> "
-      />
+      <span className="scroll-reveal">
+        <ReactTerminal
+          commands={commands}
+          themes={{
+            "my-custom-theme": {
+              themeBGColor: themeBgColor,
+              themeToolbarColor: themeToolBarColor,
+              themeColor: "#8fcb9b",
+              themePromptColor: themeToolBarColor,
+            },
+          }}
+          theme="my-custom-theme"
+          welcomeMessage={welcomeMessage}
+          prompt="$ haseebirfan-dev >> "
+        />
+      </span>
     </div>
   );
 };

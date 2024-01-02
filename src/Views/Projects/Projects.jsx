@@ -1,5 +1,4 @@
 import {
-  Badge,
   Box,
   Flex,
   Grid,
@@ -8,11 +7,10 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React from "react";
-import netflix from "../../assets/netflix.jpg";
-import triorad from "../../assets/triorad.png";
 import gpt from "../../assets/chatGPT.jpg";
+import netflix from "../../assets/netflix.jpg";
 import spotify from "../../assets/spotify.png";
+import triorad from "../../assets/triorad.png";
 
 const Projects = () => {
   const cardBgColor = useColorModeValue("white", "#1c1b23");
@@ -40,11 +38,17 @@ const Projects = () => {
       desc: "Vite React App, Tailwind CSS, Typescript",
     },
   ];
+
   return (
     <div className="w-[80%] mx-auto">
       <Flex gap={2} alignItems="center">
         <Box width="80px" height="5px" className="bg-bgPrimary"></Box>
-        <Text fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>Projects</Text>
+        <Text
+          className="text-scroll-reveal"
+          fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
+        >
+          Projects
+        </Text>
       </Flex>
       <div className="mt-5">
         <Grid
@@ -58,16 +62,11 @@ const Projects = () => {
           color={cardTextColor}
         >
           {projects?.map((project, i) => (
-            <Link
+            <a
+              className="scroll-reveal project-card rounded-lg"
+              key={i}
               href="#"
               target="_blank"
-              key={i}
-              transition="all 0.5s ease"
-              _hover={{
-                transform: "translateY(-10px)",
-                boxShadow: "0px 3px 12px 0px #8fcb9b",
-              }}
-              borderRadius="lg"
             >
               <Flex
                 flexDirection="column"
@@ -86,16 +85,16 @@ const Projects = () => {
                     border="0px"
                   ></Img>
                 </Box>
-                <div className="px-5 py-5 flex-1">
+                <Box borderBottomRadius="lg" className="px-5 py-5 flex-1">
                   <Text fontSize="medium" fontWeight="bold">
                     {project.title}
                   </Text>
                   <Text fontSize="small" opacity={0.8}>
                     {project.desc}
                   </Text>
-                </div>
+                </Box>
               </Flex>
-            </Link>
+            </a>
           ))}
         </Grid>
       </div>

@@ -1,14 +1,7 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import React from "react";
-import "./timeline.css";
 import TimelineItem from "./TimelineItem";
+import "./timeline.css";
 
 const Timeline = () => {
   const education = [
@@ -49,7 +42,12 @@ const Timeline = () => {
     <div className="w-[80%] mx-auto">
       <Flex gap={2} alignItems="center">
         <Box width="80px" height="5px" className="bg-bgPrimary"></Box>
-        <Text fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>Timeline</Text>
+        <Text
+          className="text-scroll-reveal"
+          fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
+        >
+          Timeline
+        </Text>
       </Flex>
       <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={10} mt={10}>
         <TimelineItem title={"Education"} contentItems={education} />

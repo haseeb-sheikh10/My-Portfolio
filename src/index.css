@@ -5,6 +5,8 @@
   line-height: 1.5;
   font-weight: 500;
   --body-color: #14131a;
+  --bg-secondary-color: #8fcb9b;
+  --text-primary: #eae6e5;
   scroll-behavior: smooth;
 }
 

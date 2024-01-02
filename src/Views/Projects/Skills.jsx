@@ -1,12 +1,4 @@
-import {
-  Badge,
-  Box,
-  Flex,
-  Grid,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Grid, Text, useColorModeValue } from "@chakra-ui/react";
 
 const Skills = () => {
   const cardBgColor = useColorModeValue("white", "#1c1b23");
@@ -79,12 +71,16 @@ const Skills = () => {
       ],
     },
   ];
+
   return (
     <div className="w-[80%] mx-auto">
       <div className="mt-5">
         <Flex gap={2} alignItems="center">
           <Box width="80px" height="5px" className="bg-bgPrimary"></Box>
-          <Text fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>
+          <Text
+            className="text-scroll-reveal"
+            fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
+          >
             What I Know
           </Text>
         </Flex>
@@ -98,37 +94,38 @@ const Skills = () => {
           mt={5}
         >
           {cards?.map((card, key) => (
-            <Box
-              key={key}
-              bg={cardBgColor}
-              px={3}
-              pt={2}
-              w="full"
-              borderRadius="lg"
-              boxShadow={"xl"}
-            >
-              <Text fontSize="xl" opacity="0.8">
-                {card.title}
-              </Text>
-              <Flex flexWrap="wrap" gap={2} py={4} px={1} color="gray.100">
-                {card?.tags?.map((tag, index) => (
-                  <Text
-                    key={index}
-                    bg={skillBgColor}
-                    fontSize="sm"
-                    px={3}
-                    py="4px"
-                    alignSelf="center"
-                    borderRadius="md"
-                    border="2px"
-                    borderColor={card?.tagsColor[index]}
-                    opacity={0.8}
-                  >
-                    {tag}
-                  </Text>
-                ))}
-              </Flex>
-            </Box>
+            <span key={key} className="scroll-reveal">
+              <Box
+                bg={cardBgColor}
+                px={3}
+                pt={2}
+                borderRadius="lg"
+                boxShadow={"xl"}
+                h="full"
+              >
+                <Text fontSize="xl" opacity="0.8">
+                  {card.title}
+                </Text>
+                <Flex flexWrap="wrap" gap={2} py={4} px={1} color="gray.100">
+                  {card?.tags?.map((tag, index) => (
+                    <Text
+                      key={index}
+                      bg={skillBgColor}
+                      fontSize="sm"
+                      px={3}
+                      py="4px"
+                      alignSelf="center"
+                      borderRadius="md"
+                      border="2px"
+                      borderColor={card?.tagsColor[index]}
+                      opacity={0.8}
+                    >
+                      {tag}
+                    </Text>
+                  ))}
+                </Flex>
+              </Box>
+            </span>
           ))}
         </Grid>
       </div>

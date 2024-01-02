@@ -43,16 +43,13 @@ const HeroSection = () => {
       <div className="hero-section flex-1">
         <div className="container mx-auto my-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
           <div className="text-tPrimary w-full my-auto pt-5 lg:pl-24">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.3 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 2 }}
-              className="flex flex-col gap-3"
-            >
-              <h1 className="text-xl lg:text-2xl text-center lg:text-left font-bold">
-                Hello, it's Me
-              </h1>
-              <h1 className="text-4xl lg:text-5xl text-center lg:text-left font-bold tracking-widest lg:tracking-widest">
+            <div className="flex flex-col gap-3 items-center lg:items-start">
+              <span className="text-with-gradient">
+                <h1 className="text-xl lg:text-3xl font-bold">
+                  Hello, it&apos;s Me
+                </h1>
+              </span>
+              <h1 className="text-4xl lg:text-6xl text-center lg:text-left font-bold tracking-widest lg:tracking-widest">
                 Haseeb Irfan
               </h1>
               <div className="text-center lg:text-left">
@@ -99,6 +96,7 @@ const HeroSection = () => {
                 href={CV}
                 download="HaseebIrfanCV"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Button
                   leftIcon={<FaDownload />}
@@ -108,24 +106,7 @@ const HeroSection = () => {
                   Download CV
                 </Button>
               </a>
-              {/* <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 2 }}
-                className="flex justify-center lg:justify-start"
-              >
-                <a href="#section3" className="animate-bounce">
-                  <div className="w-12 h-12 mt-10 shadow-sm shadow-bgPrimary rounded-full bg-black">
-                    <span className="flex justify-center items-center h-full">
-                      <FaLongArrowAltDown
-                        size="30px"
-                        className="text-bgSecondary h-fit"
-                      />
-                    </span>
-                  </div>
-                </a>
-              </motion.div> */}
-            </motion.div>
+            </div>
           </div>
           <div className="max-h-[310px] md:max-h-[400px] lg:max-h-full overflow-hidden mx-auto lg:mx-0">
             <svg

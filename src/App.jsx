@@ -1,22 +1,30 @@
-import "./App.css";
-import Navbar from "./Views/Navbar";
 import "@fontsource-variable/fira-code";
+import "./App.css";
 import HeroSection from "./Views/HeroSection";
-import React from "react";
+import Navbar from "./Views/Navbar";
 
 import { inject } from "@vercel/analytics";
-import Sidebar from "./Views/Projects/Sidebar";
+import TerminalBox from "./Views/Contact/TerminalBox";
+import Footer from "./Views/Footer";
 import Projects from "./Views/Projects/Projects";
 import Skills from "./Views/Projects/Skills";
 import Timeline from "./Views/Timeline/Timeline";
-import TerminalBox from "./Views/Contact/TerminalBox";
-import Footer from "./Views/Footer";
+import { useColorMode } from "@chakra-ui/react";
 
 const App = () => {
   inject();
 
+  const { colorMode } = useColorMode();
   return (
-    <>
+    <div
+      style={{
+        "--text-color": colorMode === "light" ? "#1f2733" : "#eae6e5",
+        "--gray-text-color":
+          colorMode === "light"
+            ? "hsl(0 0% 100% / 0.2)"
+            : "hsl(0 0% 100% / 0.2)",
+      }}
+    >
       <Navbar />
       <section className="section1">
         <HeroSection />
@@ -34,7 +42,7 @@ const App = () => {
         <TerminalBox />
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 

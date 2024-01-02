@@ -7,38 +7,68 @@
 .hero-section-box {
   height: calc(100% - 60px);
 }
-/* .Parallax {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+
+.text-with-gradient {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--bg-secondary-color),
+    var(--text-color)
+  );
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-.mountains {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/mountains.png");
-  background-position: center;
-  background-size: cover;
-  z-index: 3;
+
+.project-card:hover {
+  box-shadow: 0px 3px 12px 0px #8fcb9b;
+  transform: scale(1) translateY(-10px) !important;
 }
-.planets {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/planets.png");
-  background-position: center;
-  background-size: cover;
-  z-index: 2;
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    opacity: 0.3;
+    transform: scale(0.9) translateY(0);
+    transition: all 0.5s ease !important;
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view(y);
+    animation-range-start: cover;
+    animation-range-end: cover 50vh;
+  }
+
+  @keyframes scroll-reveal {
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .text-scroll-reveal {
+    color: var(--gray-text-color);
+    background-image: linear-gradient(
+      90deg,
+      var(--text-color),
+      var(--text-color)
+    );
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    animation: text-scroll-reveal linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: cover 50vh;
+  }
+
+  @keyframes text-scroll-reveal {
+    to {
+      background-size: 100% 100%;
+    }
+  }
 }
-.stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/stars.png");
-  background-position: center;
-  background-size: cover;
-} */
+
 .typed-cursor {
   color: white;
   background-color: white;
