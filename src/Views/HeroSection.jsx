@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from "react";
-import Typed from "typed.js";
-import myPic from "../assets/mypic2.png";
-import { easeIn, motion } from "framer-motion";
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useRef } from "react";
 import {
   FaDownload,
   FaGithubAlt,
   FaLinkedinIn,
-  FaLongArrowAltDown,
   FaStackOverflow,
 } from "react-icons/fa";
-import { TbBrandFiverr } from "react-icons/tb";
+import { SiUpwork } from "react-icons/si";
+import Typed from "typed.js";
+import myPic from "../assets/mypic2.png";
+
 import { Button } from "@chakra-ui/react";
-import CV from "../assets/HaseebIrfanCV.pdf";
+import CV from "../assets/my-resume.pdf";
 import LogoTicker from "./Ticker/LogoTicker";
 
 const HeroSection = () => {
@@ -40,7 +40,7 @@ const HeroSection = () => {
 
   return (
     <div className="hero-section-box flex flex-col justify-between">
-      <div className="hero-section flex-1">
+      <div className="hero-section flex-grow">
         <div className="container mx-auto my-auto grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
           <div className="text-tPrimary w-full my-auto pt-5 lg:pl-24">
             <div className="flex flex-col gap-3 items-center lg:items-start">
@@ -63,29 +63,33 @@ const HeroSection = () => {
               </div>
               <div className="flex gap-3 items-center mt-3 justify-center lg:justify-start">
                 <a
-                  href="#"
+                  href="https://github.com/haseeb-sheikh10"
+                  rel="noreferrer"
                   target="_blank"
                   className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
                 >
                   <FaGithubAlt className="text-2xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/haseeb-irfan/"
                   target="_blank"
+                  rel="noreferrer"
                   className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
                 >
                   <FaLinkedinIn className="text-2xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.upwork.com/freelancers/~01d9e16767e4b6dc41"
                   target="_blank"
+                  rel="noreferrer"
                   className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
                 >
-                  <TbBrandFiverr className="text-2xl" />
+                  <SiUpwork className="text-2xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://stackoverflow.com/users/21090056/haseeb-irfan"
                   target="_blank"
+                  rel="noreferrer"
                   className="cursor-pointer rounded-md text-tPrimary hover:bg-bgSecondary hover:text-black hover:opacity-80 transition-colors ease-in p-2"
                 >
                   <FaStackOverflow className="text-2xl" />

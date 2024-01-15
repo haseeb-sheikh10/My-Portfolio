@@ -18,6 +18,6 @@
 }
 
 .section1 {
-  height: 98vh;
+  height: calc(100vh - 56px);
   /* scroll-snap-align: center; */
 }
