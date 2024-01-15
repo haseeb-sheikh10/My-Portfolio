@@ -1,5 +1,4 @@
 import { Box, Flex, Grid, Text } from "@chakra-ui/react";
-import React from "react";
 import TimelineItem from "./TimelineItem";
 import "./timeline.css";
 
@@ -49,7 +48,12 @@ const Timeline = () => {
           Timeline
         </Text>
       </Flex>
-      <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={10} mt={10}>
+      <Grid
+        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        gridAutoColumns="auto"
+        gap={10}
+        mt={10}
+      >
         <TimelineItem title={"Education"} contentItems={education} />
         <TimelineItem title={"Experience"} contentItems={experience} />
       </Grid>

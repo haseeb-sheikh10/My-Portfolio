@@ -1,4 +1,4 @@
-import { useColorMode, useDisclosure } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { CiSun } from "react-icons/ci";

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -10,13 +10,13 @@ import { TerminalContextProvider } from "react-terminal";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <React.StrictMode>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <ChakraProvider theme={theme}>
-        <TerminalContextProvider>
-          <App />
-        </TerminalContextProvider>
-      </ChakraProvider>
-    </React.StrictMode>
+    {/* <React.StrictMode> */}
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <ChakraProvider theme={theme}>
+      <TerminalContextProvider>
+        <App />
+      </TerminalContextProvider>
+    </ChakraProvider>
+    {/* </React.StrictMode> */}
   </Provider>
 );

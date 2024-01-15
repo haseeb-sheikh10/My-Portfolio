@@ -1,10 +1,49 @@
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { ReactTerminal } from "react-terminal";
 import "./terminal.css";
+import { useState } from "react";
 
 const TerminalBox = () => {
   const themeBgColor = useColorModeValue("white", "#1c1b23");
   const themeToolBarColor = useColorModeValue("#1c1b23", "white");
+
+  const [location, setLocation] = useState("Allow us to access your location");
+
+  const getLocation = (callback) => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          console.log(position.coords);
+          callback(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        },
+        (error) => {
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              callback("You denied the request for geolocation.");
+              break;
+            case error.POSITION_UNAVAILABLE:
+              callback("Location information is unavailable.");
+              break;
+            case error.TIMEOUT:
+              callback("The request to get user location timed out.");
+              break;
+            case error.UNKNOWN_ERROR:
+              callback("An unknown error occurred.");
+              break;
+          }
+        }
+      );
+    } else {
+      callback("Geolocation is not available in this browser.");
+    }
+  };
+
+  getLocation((result) => {
+    setLocation(result);
+  });
+
   const welcomeMessage = (
     <>
       <p>Welcome to my website! Get started by typing `help` command below</p>
@@ -16,12 +55,21 @@ const TerminalBox = () => {
       <>
         <p>Available commands:</p>
         <p className="text-white">
-          <span className="text-bgSecondary">whoami:</span> Tells you who you
-          are
+          <span className="text-bgSecondary font-bold">whoami:</span> Tells you
+          your location
+        </p>
+        <p className="text-white">
+          <span className="text-bgSecondary font-bold">gme:</span> Get my email
+        </p>
+        <p className="text-white">
+          <span className="text-bgSecondary font-bold">gmp:</span> Get my
+          phonenumber
         </p>
       </>
     ),
-    whoami: "jackharper",
+    whoami: location,
+    gme: "haseeb_irfan1368@hotmail.com",
+    gmp: "+92 316 4914011",
     cd: (directory) => `changed path to ${directory}`,
   };
 
@@ -39,16 +87,16 @@ const TerminalBox = () => {
       <span className="scroll-reveal">
         <ReactTerminal
           commands={commands}
+          welcomeMessage={welcomeMessage}
           themes={{
             "my-custom-theme": {
               themeBGColor: themeBgColor,
               themeToolbarColor: themeToolBarColor,
-              themeColor: "#8fcb9b",
-              themePromptColor: themeToolBarColor,
+              themeColor: themeToolBarColor,
+              themePromptColor: "#8fcb9b",
             },
           }}
           theme="my-custom-theme"
-          welcomeMessage={welcomeMessage}
           prompt="$ haseebirfan-dev >> "
         />
       </span>
