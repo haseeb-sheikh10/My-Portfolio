@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import gpt from "../../assets/chatGPT.jpg";
+import toddle from "../../assets/toddle.png";
 import netflix from "../../assets/netflix.jpg";
 import spotify from "../../assets/spotify.png";
 import triorad from "../../assets/triorad.png";
@@ -18,9 +18,14 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Toddles Chat App",
+      img: toddle,
+      desc: "Real Time Messaging App -  NextJS 14, Tailwind CSS, Typescript, Redis, WebSockets",
+    },
+    {
       title: "TRIORAD",
       img: triorad,
-      desc: "Its a Radius Management App - All CopyRights Reserved By Trionex ®.",
+      desc: "Its a Radius Management Billing System - All CopyRights Reserved By Trionex ®.",
     },
     {
       title: "Netflix Clone",
@@ -30,11 +35,6 @@ const Projects = () => {
     {
       title: "Spotify Clone",
       img: spotify,
-      desc: "Vite React App, Tailwind CSS, Typescript",
-    },
-    {
-      title: "ChatGPT Clone",
-      img: gpt,
       desc: "Vite React App, Tailwind CSS, Typescript",
     },
   ];
